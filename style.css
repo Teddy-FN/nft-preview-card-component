@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* 1 rem = 16px, 2rem = 32px */
+  --size-font: 1.125rem; /* 18px */
+
+  /* Color */
+  --primary: hsl(178, 100%, 50%);
+  --primary-lighter: hsla(178, 100%, 50%, 0.506);
+  --secondary: hsl(215, 51%, 70%);
+  --white: hsl(0, 0%, 100%);
+
+  --main-bg-color: hsl(217, 54%, 11%);
+  --main-bg-card-color: hsl(216, 50%, 16%);
+  --main-line-color: hsl(215, 32%, 27%);
+  --text-color: hsl(0, 0%, 100%);
+  --text-color-transparent: hsla(0, 0%, 100%, 0.73);
+
+  /* Font weight */
+  --font-medium: 300;
+  --font-bold: 400;
+  --font-xtrabold: 600;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: var(--size-font);
+  color: var(--text-color-transparent);
+  background: var(--main-bg-color);
+  font-weight: var(--font-medium);
+  width: 100%;
+  height: 100%;
+}
+
+span {
+  cursor: pointer;
+}
+
+span:hover {
+  color: var(--primary);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card {
+  width: 22%;
+  background-color: var(--main-bg-card-color);
+  margin: 5% auto;
+  border-radius: 0.625em;
+  padding: 20px;
+  box-shadow: 10px 20px 20px 10px hsl(216, 53%, 10%);
+}
+
+.line {
+  border: 0.5px solid var(--text-color-transparent);
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.625em;
+  cursor: pointer;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.fa-ethereum {
+  color: var(--primary);
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-lighter);
+  display: none;
+  cursor: pointer;
+  border-radius: 0.625em;
+}
+
+.img-overlay .eyes-icon {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eye {
+  font-size: 12.5rem;
+}
+
+.img-wrapper:hover .img-overlay {
+  display: flex;
+}
+
+.product-img {
+  display: block;
+}
+
+.price {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: var(--font-xtrabold);
+}
+
+.time,
+.creation {
+  font-size: 0.8rem;
+}
+
+.name-product {
+  font-size: var(--size-font);
+  font-weight: var(--font-xtrabold);
+  color: var(--text-color);
+  font-style: normal;
+  cursor: pointer;
+}
+
+.name-product:hover {
+  color: var(--primary);
+}
+
+.detail-product {
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+
+.avatar-wrapper {
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+}
+
+.avatar-img {
+  width: 30px;
+  height: 30px;
+}
+
+.row.author-wrapper {
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.row.times {
+  gap: 10px;
+}
+.row.ethereum {
+  gap: 10px;
+}
+
+.whitesIcons {
+  color: var(--white);
+}
+
+/* Mobile */
+@media all and (max-width: 375px) {
+  .card {
+    width: 80%;
+  }
+}
+
+/* Mobile L */
+@media (min-width: 375px) and (max-width: 425px) {
+  .card {
+    width: 70%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 425px) and (max-width: 768px) {
+  .card {
+    width: 40%;
+  }
+}
